@@ -134,7 +134,7 @@ export default {
   }
   &__content {
     overflow: auto;
-    max-height: 480px;
+    max-height: 490px;
     margin-top: 20px;
   }
 }

@@ -21,8 +21,8 @@
           box-sizing: content-box;
         "
       >
-        <template #icon><user-add-outlined /></template>
-        Tìm kiếm người trò chuyện
+        <template #icon><wechat-outlined style="font-size: 2rem" /></template>
+        <span style="font-size: 1.8rem">Tìm kiếm người trò chuyện</span>
       </a-button>
     </div>
   </div>
@@ -32,7 +32,7 @@
 import {
   UserOutlined,
   LogoutOutlined,
-  UserAddOutlined,
+  WechatOutlined,
 } from "@ant-design/icons-vue";
 import ChatList from "@/components/ChatList.vue";
 
@@ -40,7 +40,7 @@ export default {
   components: {
     UserOutlined,
     LogoutOutlined,
-    UserAddOutlined,
+    WechatOutlined,
     ChatList,
   },
 };
