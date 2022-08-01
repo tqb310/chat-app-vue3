@@ -1,0 +1,44 @@
+@use "./assets/styles/" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+}
+
+#app {
+  $bg-color-1: nth($bg-color, 1);
+  $bg-color-2: nth($bg-color, 2);
+  $bg-color-3: nth($bg-color, 3);
+
+  // background: linear-gradient(
+  //   to bottom right,
+  //   $bg-color-1,
+  //   $bg-color-2,
+  //   $bg-color-3
+  // );
+  min-height: 100vh;
+  width: 100%;
+}
+
+.ant-layout-header,
+.ant-layout-sider,
+.ant-layout-content {
+  background: #fff;
+}
+
+.ant-layout-sider {
+  max-width: 400px !important;
+  width: 400px !important;
+  flex: 0 0 400px !important;
+}
