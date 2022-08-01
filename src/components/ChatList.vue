@@ -134,8 +134,19 @@ export default {
   }
   &__content {
     overflow: auto;
-    max-height: 490px;
+    max-height: 480px;
     margin-top: 20px;
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: #ddd;
+    }
+    &::-webkit-scrollbar-track {
+      border-radius: 4px;
+      background-color: #fafafa;
+    }
   }
 }
 </style>

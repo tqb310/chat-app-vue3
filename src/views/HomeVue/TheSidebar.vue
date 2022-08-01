@@ -14,6 +14,7 @@
     <div style="padding: 0 1rem">
       <a-button
         type="primary"
+        shape="round"
         style="
           margin-left: auto;
           width: 97%;

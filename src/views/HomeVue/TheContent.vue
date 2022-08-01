@@ -42,10 +42,10 @@ export default {
     display: flex;
     justify-content: space-between;
     background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 16px;
+    padding: 1.5rem 3rem;
+    border-radius: 30px;
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
     }
     h1,
     p {
