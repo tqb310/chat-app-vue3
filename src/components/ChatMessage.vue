@@ -1,10 +1,10 @@
 <template>
-  <a-row :gutter="[0, 16]" :class="{ opposite: isCurrent }">
-    <a-col :span="2"
+  <a-row :class="{ opposite: isCurrent }">
+    <a-col style="width: 60px"
       ><a-avatar class="chat-content__avatar" :size="40"
         ><template #icon><UserOutlined /></template></a-avatar
     ></a-col>
-    <a-col :span="22">
+    <a-col style="flex-grow: 1">
       <a-row class="chat-content__msg-wrapper" :gutter="[16, 8]">
         <!-- <a-col>{{ uname.split(" ").pop() }}</a-col> -->
         <a-col v-for="(message, index) in messages" :key="index"

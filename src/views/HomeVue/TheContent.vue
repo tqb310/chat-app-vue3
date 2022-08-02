@@ -8,27 +8,32 @@
             <p>Đây là phòng bí mật</p>
           </div>
           <div>
-            <a-button type="primary">
+            <a-button type="primary" style="margin-right: 20px">
               <template #icon><user-add-outlined /></template>
               <span>Mời</span>
+            </a-button>
+            <a-button type="primary" shape="circle">
+              <template #icon><info-circle-filled /></template>
             </a-button>
           </div>
         </div>
         <chat-content />
       </div>
     </a-layout-content>
-    <a-layout-sider> Members </a-layout-sider>
+    <a-layout-sider><the-member /> </a-layout-sider>
   </a-layout>
 </template>
 
 <script>
-import { UserAddOutlined } from "@ant-design/icons-vue";
+import { UserAddOutlined, InfoCircleFilled } from "@ant-design/icons-vue";
 import ChatContent from "@/components/ChatContent.vue";
-
+import TheMember from "./TheMember.vue";
 export default {
   components: {
     UserAddOutlined,
     ChatContent,
+    InfoCircleFilled,
+    TheMember,
   },
 };
 </script>
@@ -41,6 +46,7 @@ export default {
   &__header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: #fff;
     padding: 1.5rem 3rem;
     border-radius: 30px;

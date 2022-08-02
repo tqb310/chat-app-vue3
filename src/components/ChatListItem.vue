@@ -1,6 +1,6 @@
 <template>
-  <a-list-item style="padding: 1.2rem">
-    <a-list-item-meta :description="latestMsg">
+  <a-list-item class="chatlist-item unread" style="padding: 1.2rem">
+    <a-list-item-meta :description="'Nhi: ' + latestMsg">
       <template #title>
         <span>{{ username }}</span>
       </template>
@@ -29,4 +29,19 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss">
+.chatlist-item {
+  user-select: none;
+  cursor: pointer;
+  transition: background-color 0.4s;
+  &:hover {
+    background-color: #f3f3f3;
+  }
+}
+.unread {
+  .ant-list-item-meta-description {
+    font-weight: bold !important;
+    color: #000 !important;
+  }
+}
+</style>
