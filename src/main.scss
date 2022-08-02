@@ -16,6 +16,9 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+ul {
+  list-style: none;
+}
 #app {
   $bg-color-1: nth($bg-color, 1);
   $bg-color-2: nth($bg-color, 2);

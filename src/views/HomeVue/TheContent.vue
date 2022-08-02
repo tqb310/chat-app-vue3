@@ -12,15 +12,21 @@
               <template #icon><user-add-outlined /></template>
               <span>Mời</span>
             </a-button>
-            <a-button type="primary" shape="circle">
-              <template #icon><info-circle-filled /></template>
-            </a-button>
+            <a-tooltip
+              placement="top"
+              @click="isShowMemberList = !isShowMemberList"
+            >
+              <template #title>Thành viên nhóm</template>
+              <a-button type="primary" shape="circle">
+                <template #icon><info-circle-filled /></template>
+              </a-button>
+            </a-tooltip>
           </div>
         </div>
         <chat-content />
       </div>
     </a-layout-content>
-    <a-layout-sider><the-member /> </a-layout-sider>
+    <a-layout-sider v-if="isShowMemberList"><the-member /> </a-layout-sider>
   </a-layout>
 </template>
 
@@ -28,7 +34,12 @@
 import { UserAddOutlined, InfoCircleFilled } from "@ant-design/icons-vue";
 import ChatContent from "@/components/ChatContent.vue";
 import TheMember from "./TheMember.vue";
+import { ref } from "vue";
 export default {
+  setup() {
+    const isShowMemberList = ref(true);
+    return { isShowMemberList };
+  },
   components: {
     UserAddOutlined,
     ChatContent,
