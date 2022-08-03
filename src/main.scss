@@ -30,8 +30,9 @@ ul {
   //   $bg-color-2,
   //   $bg-color-3
   // );
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
+  overflow: hidden;
 }
 
 .ant-layout-header,
