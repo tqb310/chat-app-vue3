@@ -5,7 +5,7 @@
         <template #icon><UserOutlined /></template>
       </a-avatar>
       <span class="uname">Truong Quoc Bao</span>
-      <a-button type="primary" style="margin-left: auto">
+      <a-button type="primary" style="margin-left: auto" @click="signOut()">
         <template #icon><logout-outlined /></template>
         Đăng xuất
       </a-button>
@@ -36,6 +36,7 @@ import {
   WechatOutlined,
 } from "@ant-design/icons-vue";
 import ChatList from "@/components/ChatList.vue";
+import { signOut } from "@firebase/auth";
 
 export default {
   components: {
@@ -43,6 +44,9 @@ export default {
     LogoutOutlined,
     WechatOutlined,
     ChatList,
+  },
+  setup() {
+    return { signOut };
   },
 };
 </script>

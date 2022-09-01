@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { onUnmounted } from "vue";
+import { onUnmounted, watch } from "vue";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "@/services/firebase/config";
 import authProvider from "./contexts/authProvider";
@@ -13,16 +13,15 @@ export default {
   setup() {
     const unsubcribe = onAuthStateChanged(auth, userData => {
       if (userData) authProvider.setUser(userData);
-      else userData = null;
+      else authProvider.setUser(null);
     });
 
     //Clean up
     onUnmounted(unsubcribe);
+
+    watch(authProvider.auth, value => console.log(value));
   },
 };
 </script>
 
-<style lang="scss">
-nav {
-}
-</style>
+<style lang="scss"></style>
